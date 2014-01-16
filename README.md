@@ -1,6 +1,6 @@
 # GhRepoStats
 
-TODO: Write a gem description
+Fetches most active repositories for a given event & time range on GitHub utilizing the GitHub Archive project.
 
 ## Installation
 
@@ -18,7 +18,26 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Command Line
+
+    gh_repo_stats [--after DATETIME] [--before DATETIME] [--event EVENT_NAME] [--count COUNT]
+
+Usage Example
+
+    $ gh_repo_stats --after 2012-11-01T13:00:00Z --before 2012-11-02T03:12:14-03:00 --event PushEvent
+
+Sample Output
+
+	sakai-mirror/melete - 168 events
+	runningforworldpeace/feeds - 103 events
+	chapuni/llvm-project-submodule - 98 events
+	chapuni/llvm-project - 98 events
+	Frameset91/untitled0815 - 94 events
+	josmera01/juanrueda-internation - 78 events
+	artmig/artmig.github.com - 76 events
+	mozilla/mozilla-central - 69 events
+	bcomdlc/bcom-homepage-archive - 68 events
+	sakai-mirror/ambrosia - 68 events
 
 ## Contributing
 
