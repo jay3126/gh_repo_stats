@@ -1,4 +1,4 @@
-# GhRepoStats
+# GhRepoStats [![Build Status](https://travis-ci.org/jesalg/gh_repo_stats.png?branch=master)](https://travis-ci.org/jesalg/gh_repo_stats)
 
 Fetches most active repositories for a given event & time range on GitHub utilizing the GitHub Archive project.
 
