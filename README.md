@@ -35,7 +35,7 @@ Sample Output
 
 Run this to execute the test suite
 
-   rspec spec
+    rspec spec
 
 ## Contributing
 
