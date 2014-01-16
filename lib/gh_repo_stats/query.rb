@@ -39,8 +39,8 @@ module GhRepoStats
 
     def to_s
       output = []
-      @repos.each do |repo, entries|
-        output << "#{repo.gsub('https://github.com/','')} - #{entries.length} events"
+      @repos.each do |slug, events|
+        output << "#{slug} - #{events.length} events"
       end
       output.join("\n")
     end
@@ -51,7 +51,7 @@ module GhRepoStats
       js = Zlib::GzipReader.new(open(url)).read
 
       Yajl::Parser.parse(js) do |event|
-        event['slug'] = event['repository'].nil? ? event['url'] : event['repository']['url']
+        event['slug'] = event['repository'].nil? ? event['url'] : "#{event['repository']['owner']}/#{event['repository']['name']}"
         @events << event if event_date_within_range?(DateTime.parse(event['created_at'])) && event_type_match?(event['type'])
       end
 
