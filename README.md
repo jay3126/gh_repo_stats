@@ -4,17 +4,9 @@ Fetches most active repositories for a given event & time range on GitHub utiliz
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'gh_repo_stats'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install gh_repo_stats
+    git clone git@github.com:jesalg/gh_repo_stats.git
+    cd gh_repo_stats
+    rake install
 
 ## Usage
 
@@ -38,6 +30,12 @@ Sample Output
 	mozilla/mozilla-central - 69 events
 	bcomdlc/bcom-homepage-archive - 68 events
 	sakai-mirror/ambrosia - 68 events
+
+## Tests
+
+Run this to execute the test suite
+
+   rspec spec
 
 ## Contributing
 
